@@ -10,13 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#07111c;
-    --panel:#0d1b2b;
-    --line:#1e3348;
+    --ink:#0e0a1a;
+    --panel:#171128;
+    --line:#2d2448;
     --text:#e6ebf0;
     --muted:#9aa8b6;
-    --accent:#38bdf8;
-    --accent-ink:#03202f;
+    --accent:#a78bfa;
+    --accent-ink:#1b0a3a;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -27,7 +27,7 @@
   .eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:14px;color:var(--accent);margin:0 0 16px}
 
   /* nav */
-  header{position:sticky;top:0;z-index:10;background:rgba(7,17,28,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:10;background:rgba(14,10,26,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
   .logo{display:flex;align-items:center;gap:10px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:24px;letter-spacing:.14em;text-decoration:none}
   .logo svg{width:28px;height:28px;color:var(--accent)}
@@ -35,14 +35,14 @@
   nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;padding:10px 0;display:inline-block}
   nav a:hover{color:var(--text)}
   .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;background:var(--accent);color:var(--accent-ink);font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
-  .btn:hover{background:#7dd3fc;transform:translateY(-1px)}
+  .btn:hover{background:#c4b5fd;transform:translateY(-1px)}
   .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
   .btn.ghost:hover{border-color:var(--accent);background:transparent}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
   /* hero */
   .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
-    background:radial-gradient(900px 500px at 78% 30%,rgba(56,189,248,.18),transparent 60%),linear-gradient(180deg,#0b1a29,var(--ink))}
+    background:radial-gradient(900px 500px at 78% 30%,rgba(167,139,250,.2),transparent 60%),linear-gradient(180deg,#150f26,var(--ink))}
   .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:96px;padding-bottom:96px}
   .hero-copy{flex:1 1 480px;min-width:0}
   .hero h1{font-size:clamp(52px,8vw,104px);font-weight:700}
@@ -65,7 +65,7 @@
 
   /* fleet */
   .fleet .card{padding:0;overflow:hidden}
-  .fleet .shot{aspect-ratio:16/9;background:linear-gradient(135deg,#12263a,#0b1a29);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);color:var(--muted);font-family:"Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:14px}
+  .fleet .shot{aspect-ratio:16/9;background:linear-gradient(135deg,#201838,#150f26);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);color:var(--muted);font-family:"Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:14px}
   .fleet .body{padding:28px 32px 32px}
   .tag{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--accent);margin-bottom:8px}
   dl{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;margin:18px 0 0;font-size:15px}
@@ -122,7 +122,7 @@
   details p{margin:0 0 24px;color:var(--muted);max-width:700px}
 
   /* final call to action */
-  .cta-band{border-bottom:1px solid var(--line);background:linear-gradient(100deg,#07263a,#0b1a29 60%);padding:72px 0}
+  .cta-band{border-bottom:1px solid var(--line);background:linear-gradient(100deg,#1d1038,#150f26 60%);padding:72px 0}
   .cta-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
   .cta-band h2{font-size:clamp(34px,5vw,58px);font-weight:700;max-width:640px}
   .cta-band h2 em{font-style:normal;color:var(--accent)}
@@ -179,19 +179,19 @@
         <svg viewBox="0 0 560 420" fill="none">
           <defs>
             <linearGradient id="flame" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
-              <stop offset="1" stop-color="#38bdf8"/>
+              <stop offset="0" stop-color="#a78bfa" stop-opacity="0"/>
+              <stop offset="1" stop-color="#a78bfa"/>
             </linearGradient>
           </defs>
-          <g stroke="#1e3348" stroke-width="1">
+          <g stroke="#2d2448" stroke-width="1">
             <circle cx="300" cy="210" r="90"/><circle cx="300" cy="210" r="150"/><circle cx="300" cy="210" r="200"/>
             <path d="M300 0v420M0 210h560"/>
           </g>
           <rect x="20" y="203" width="190" height="14" fill="url(#flame)"/>
           <g transform="translate(300 210) rotate(-90) scale(1.25)">
-            <path d="M0 -150 L10 -110 L16 -40 L120 40 L120 62 L26 38 L22 92 L50 116 L50 128 L0 118 L-50 128 L-50 116 L-22 92 L-26 38 L-120 62 L-120 40 L-16 -40 L-10 -110 Z" fill="#12263a" stroke="#e6ebf0" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M0 -118 L6 -80 L0 -60 L-6 -80 Z" fill="#38bdf8"/>
-            <path d="M0 -40 V100" stroke="#1e3348" stroke-width="2"/>
+            <path d="M0 -150 L10 -110 L16 -40 L120 40 L120 62 L26 38 L22 92 L50 116 L50 128 L0 118 L-50 128 L-50 116 L-22 92 L-26 38 L-120 62 L-120 40 L-16 -40 L-10 -110 Z" fill="#201838" stroke="#e6ebf0" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M0 -118 L6 -80 L0 -60 L-6 -80 Z" fill="#a78bfa"/>
+            <path d="M0 -40 V100" stroke="#2d2448" stroke-width="2"/>
           </g>
         </svg>
       </div>
