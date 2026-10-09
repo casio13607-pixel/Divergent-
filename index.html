@@ -97,6 +97,28 @@
   .note{font-size:13px;color:var(--muted);margin:0}
   #thanks{display:none;color:var(--accent);font-weight:600;margin:0}
 
+  /* Sakindar slider */
+  .slider{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+  .track{display:flex;transition:transform .7s cubic-bezier(.65,0,.35,1);will-change:transform}
+  .slide{flex:0 0 100%;min-width:0;min-height:300px;aspect-ratio:21/9;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:36px;position:relative}
+  .slide:nth-child(1){background:radial-gradient(600px 300px at 80% 20%,rgba(167,139,250,.35),transparent 60%),linear-gradient(135deg,#201838,#150f26)}
+  .slide:nth-child(2){background:radial-gradient(600px 300px at 20% 30%,rgba(196,181,253,.28),transparent 60%),linear-gradient(135deg,#1d1038,#0e0a1a)}
+  .slide:nth-child(3){background:radial-gradient(600px 300px at 70% 80%,rgba(167,139,250,.3),transparent 60%),linear-gradient(135deg,#251a45,#150f26)}
+  .slide:nth-child(4){background:radial-gradient(600px 300px at 30% 70%,rgba(139,92,246,.32),transparent 60%),linear-gradient(135deg,#1a1233,#0e0a1a)}
+  .slide .num-tag{position:absolute;top:28px;left:36px;font-family:"Barlow Condensed",sans-serif;letter-spacing:.22em;font-size:14px;color:var(--accent);text-transform:uppercase}
+  .slide h3{font-size:clamp(30px,4vw,48px);font-weight:700}
+  .slide p{margin:0;color:var(--muted);max-width:560px}
+  .s-ctrl{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px}
+  .dots{display:flex;gap:10px}
+  .dot{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;padding:0}
+  .dot::before{content:"";width:28px;height:4px;background:var(--line);transition:background .3s,width .3s}
+  .dot[aria-current="true"]::before{background:var(--accent);width:44px}
+  .arrows{display:flex;gap:10px}
+  .arrow{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:transparent;color:var(--text);border:1px solid var(--line);cursor:pointer;transition:border-color .15s,color .15s}
+  .arrow:hover{border-color:var(--accent);color:var(--accent)}
+  .arrow svg{width:20px;height:20px}
+  .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent)}
+
   /* why us */
   .why{display:flex;flex-wrap:wrap;gap:20px}
   .why .item{flex:1 1 440px;min-width:0;display:flex;gap:20px;padding:28px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),transparent)}
@@ -152,6 +174,7 @@
       <ul>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#fleet">Aircraft</a></li>
+        <li><a href="#sakindar">Sakindar</a></li>
         <li><a href="#why">Why us</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -267,6 +290,55 @@
       <div class="num"><b>[00]</b><span>Aircraft delivered</span></div>
       <div class="num"><b>[00]</b><span>Countries served</span></div>
       <div class="num"><b>[00%]</b><span>Fleet availability</span></div>
+    </div>
+  </section>
+
+  <section id="sakindar">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Meet</p>
+        <h2>Sakindar</h2>
+        <p>[Add one or two lines about Sakindar here, for example who they are and what they do at Halcyon Air.]</p>
+      </div>
+
+      <div class="slider" id="sk-slider" role="region" aria-roledescription="carousel" aria-label="Sakindar highlights">
+        <div class="track" id="sk-track">
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <span class="num-tag">01 / 04</span>
+            <h3>[Slide title one]</h3>
+            <p>[Add a photo, achievement or short message here.]</p>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+            <span class="num-tag">02 / 04</span>
+            <h3>[Slide title two]</h3>
+            <p>[Add a photo, achievement or short message here.]</p>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+            <span class="num-tag">03 / 04</span>
+            <h3>[Slide title three]</h3>
+            <p>[Add a photo, achievement or short message here.]</p>
+          </div>
+          <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+            <span class="num-tag">04 / 04</span>
+            <h3>[Slide title four]</h3>
+            <p>[Add a photo, achievement or short message here.]</p>
+          </div>
+        </div>
+        <div class="bar" id="sk-bar" aria-hidden="true"></div>
+      </div>
+
+      <div class="s-ctrl">
+        <div class="dots" id="sk-dots">
+          <button class="dot" type="button" aria-label="Go to slide 1" aria-current="true"></button>
+          <button class="dot" type="button" aria-label="Go to slide 2"></button>
+          <button class="dot" type="button" aria-label="Go to slide 3"></button>
+          <button class="dot" type="button" aria-label="Go to slide 4"></button>
+        </div>
+        <div class="arrows">
+          <button class="arrow" type="button" id="sk-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="arrow" type="button" id="sk-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -410,6 +482,57 @@
     document.getElementById('thanks').style.display = 'block';
     this.reset();
   });
+</script>
+<script>
+  // Sakindar slider: auto-plays, pauses on hover or focus, supports arrows and dots.
+  (function () {
+    var slider = document.getElementById('sk-slider');
+    var track = document.getElementById('sk-track');
+    var bar = document.getElementById('sk-bar');
+    var dots = document.querySelectorAll('#sk-dots .dot');
+    var total = dots.length, i = 0, delay = 4500, timer = null, started = 0, left = delay;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(n) {
+      i = (n + total) % total;
+      track.style.transform = 'translateX(' + (-100 * i) + '%)';
+      dots.forEach(function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+      left = delay;
+      if (timer) { restart(); }
+    }
+    function tickBar() {
+      bar.style.transition = 'none';
+      bar.style.width = '0';
+      void bar.offsetWidth;
+      bar.style.transition = 'width ' + left + 'ms linear';
+      bar.style.width = '100%';
+    }
+    function restart() {
+      clearTimeout(timer);
+      started = Date.now();
+      tickBar();
+      timer = setTimeout(function () { left = delay; show(i + 1); }, left);
+    }
+    function pause() {
+      if (!timer) return;
+      clearTimeout(timer); timer = null;
+      left = Math.max(300, left - (Date.now() - started));
+      bar.style.transition = 'none';
+    }
+    function play() { if (!reduce && !timer) { restart(); } }
+
+    document.getElementById('sk-prev').addEventListener('click', function () { show(i - 1); });
+    document.getElementById('sk-next').addEventListener('click', function () { show(i + 1); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
+    slider.addEventListener('mouseenter', pause);
+    slider.addEventListener('mouseleave', play);
+    document.querySelector('#sakindar').addEventListener('focusin', pause);
+    document.querySelector('#sakindar').addEventListener('focusout', play);
+    document.addEventListener('visibilitychange', function () { document.hidden ? pause() : play(); });
+
+    show(0);
+    play();
+  })();
 </script>
 </body>
 </html>
