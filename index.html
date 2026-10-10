@@ -119,6 +119,32 @@
   .arrow svg{width:20px;height:20px}
   .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent)}
 
+  /* Ahmed profile */
+  .profile{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+  .portrait{flex:1 1 320px;max-width:440px;min-width:0;aspect-ratio:4/5;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--muted);font-family:"Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:14px;
+    background:radial-gradient(400px 300px at 50% 30%,rgba(167,139,250,.28),transparent 65%),linear-gradient(160deg,#201838,#150f26)}
+  .profile-copy{flex:1 1 420px;min-width:0}
+  .profile-copy h2{font-size:clamp(36px,5vw,60px);font-weight:700}
+  .role{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:10px 0 20px}
+  .profile-copy p{color:var(--muted);margin:0 0 16px;max-width:560px}
+  .facts{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0;padding:0;list-style:none}
+  .facts li{border:1px solid var(--line);padding:10px 16px;font-size:15px;color:var(--text)}
+  .facts span{color:var(--muted)}
+
+  /* reviews */
+  .rating-sum{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+  .rating-sum b{font-family:"Barlow Condensed",sans-serif;font-size:64px;line-height:1}
+  .stars{display:inline-flex;gap:3px;color:var(--accent)}
+  .stars svg{width:20px;height:20px}
+  .stars .off{color:var(--line)}
+  .rating-sum small{display:block;color:var(--muted);font-size:14px}
+  .review{flex:1 1 300px;min-width:0;background:var(--panel);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:16px}
+  .review blockquote{margin:0;color:var(--text);font-size:17px}
+  .who{display:flex;align-items:center;gap:14px;margin-top:auto}
+  .avatar{flex:0 0 44px;height:44px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;color:var(--accent)}
+  .who b{display:block;font-weight:600;line-height:1.3}
+  .who span{color:var(--muted);font-size:14px}
+
   /* why us */
   .why{display:flex;flex-wrap:wrap;gap:20px}
   .why .item{flex:1 1 440px;min-width:0;display:flex;gap:20px;padding:28px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),transparent)}
@@ -175,6 +201,8 @@
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#fleet">Aircraft</a></li>
         <li><a href="#sakindar">Sakindar</a></li>
+        <li><a href="#ahmed">Ahmed</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#why">Why us</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -338,6 +366,73 @@
           <button class="arrow" type="button" id="sk-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
           <button class="arrow" type="button" id="sk-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ahmed">
+    <div class="wrap">
+      <div class="profile">
+        <div class="portrait" role="img" aria-label="Photo placeholder for Ahmed">Photo: [Ahmed]</div>
+        <div class="profile-copy">
+          <p class="eyebrow">Meet</p>
+          <h2>Ahmed</h2>
+          <p class="role">[Role or title]</p>
+          <p>[Add a short introduction to Ahmed here: who they are, their background and what they do at Halcyon Air.]</p>
+          <p>[Add a second paragraph if needed, such as experience, focus areas or a personal message to clients.]</p>
+          <ul class="facts">
+            <li><span>Experience:</span> [00 years]</li>
+            <li><span>Focus:</span> [Area]</li>
+            <li><span>Based in:</span> [City]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.8 7.4L12 18l-6.6 4 1.8-7.4-5.7-5 7.5-.7z"/></symbol>
+    </svg>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Reviews</p>
+        <h2>What clients say</h2>
+        <p>[Replace the placeholders below with real, permitted client feedback. Do not publish reviews that were not given.]</p>
+      </div>
+
+      <div class="rating-sum">
+        <b>[0.0]</b>
+        <div>
+          <span class="stars" role="img" aria-label="Average rating placeholder">
+            <svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg>
+          </span>
+          <small>Based on [00] reviews</small>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="review">
+          <span class="stars" role="img" aria-label="Rating placeholder, stars to be added">
+            <svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg>
+          </span>
+          <blockquote>[Paste a real client review here.]</blockquote>
+          <div class="who"><div class="avatar" aria-hidden="true">A</div><div><b>[Client name]</b><span>[Title, organization]</span></div></div>
+        </article>
+        <article class="review">
+          <span class="stars" role="img" aria-label="Rating placeholder, stars to be added">
+            <svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg>
+          </span>
+          <blockquote>[Paste a real client review here.]</blockquote>
+          <div class="who"><div class="avatar" aria-hidden="true">B</div><div><b>[Client name]</b><span>[Title, organization]</span></div></div>
+        </article>
+        <article class="review">
+          <span class="stars" role="img" aria-label="Rating placeholder, stars to be added">
+            <svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg><svg class="off"><use href="#star"/></svg>
+          </span>
+          <blockquote>[Paste a real client review here.]</blockquote>
+          <div class="who"><div class="avatar" aria-hidden="true">C</div><div><b>[Client name]</b><span>[Title, organization]</span></div></div>
+        </article>
       </div>
     </div>
   </section>
